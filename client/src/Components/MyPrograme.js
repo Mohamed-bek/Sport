@@ -7,7 +7,9 @@ function MyPrograme() {
   const { programe, updatePrograme } = programeStore();
   const loginToPrograme = async (password) => {
     try {
-      const { data } = await axios.get("/myPrograme/" + password);
+      const { data } = await axios.get(
+        "https://sport-kappa-six.vercel.app/myPrograme/" + password
+      );
       updatePrograme(data.programe);
       window.location.href = "/programeDetails";
     } catch (error) {

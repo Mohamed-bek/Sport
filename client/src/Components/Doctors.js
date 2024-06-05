@@ -6,7 +6,9 @@ function Doctors() {
   const [newDoctors, setnewDoctors] = useState([]);
   const getDoctors = async () => {
     try {
-      const { data, status } = await axios.get("/doctors");
+      const { data, status } = await axios.get(
+        "https://sport-kappa-six.vercel.app/doctors"
+      );
       if (status === 200) {
         setnewDoctors(data.newDoctors);
         setoldDoctors(data.oldDoctors);
@@ -20,7 +22,9 @@ function Doctors() {
   }, []);
   const activateDoctor = async (id) => {
     try {
-      const { data } = await axios.put("/doctors/" + id);
+      const { data } = await axios.put(
+        "https://sport-kappa-six.vercel.app/doctors/" + id
+      );
       window.location.reload();
     } catch (error) {
       console.log(error);
@@ -28,7 +32,9 @@ function Doctors() {
   };
   const deleteDoctor = async (id) => {
     try {
-      const { data } = await axios.delete("/doctors/" + id);
+      const { data } = await axios.delete(
+        "https://sport-kappa-six.vercel.app/doctors/" + id
+      );
       window.location.reload();
     } catch (error) {
       console.log(error);

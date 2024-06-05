@@ -62,9 +62,12 @@ function Login(props) {
   const LoginHandler = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("/login", {
-        ...InfoLog,
-      });
+      const { data } = await axios.post(
+        "https://sport-kappa-six.vercel.app/login",
+        {
+          ...InfoLog,
+        }
+      );
       if (typeof window !== "undefined") {
         updateUser(data.user);
         window.location.href = "/";

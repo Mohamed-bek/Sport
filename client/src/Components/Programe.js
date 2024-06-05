@@ -47,11 +47,14 @@ function Programe() {
   const RequestFroPrograme = async (e) => {
     e.preventDefault();
     try {
-      const { data, status } = await axios.post("/request-programe", {
-        ...InfoSign,
-        healthProblems: malads,
-        doctorId: user._id,
-      });
+      const { data, status } = await axios.post(
+        "https://sport-kappa-six.vercel.app/request-programe",
+        {
+          ...InfoSign,
+          healthProblems: malads,
+          doctorId: user._id,
+        }
+      );
       if (status === 200) {
         successRef.current.style.scale = 1;
         setInfoSign({

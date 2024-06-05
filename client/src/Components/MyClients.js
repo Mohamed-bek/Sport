@@ -7,7 +7,9 @@ function MyClients() {
   const [clients, setclients] = useState([]);
   const getClient = async () => {
     try {
-      const { data } = await axios.get("/clients/" + user?._id);
+      const { data } = await axios.get(
+        "https://sport-kappa-six.vercel.app/clients/" + user?._id
+      );
       console.log("the data is : ", data);
       setclients(data.clients);
     } catch (error) {

@@ -11,11 +11,14 @@ function ProgrameRequest() {
   const [client, setClient] = useState(null);
   const getProgramRequests = async () => {
     try {
-      const { data, status } = await axios.get("/programe-requests", {
-        params: {
-          id: user._id,
-        },
-      });
+      const { data, status } = await axios.get(
+        "https://sport-kappa-six.vercel.app/programe-requests",
+        {
+          params: {
+            id: user._id,
+          },
+        }
+      );
       setProgrameReq([...data.programes]);
     } catch (error) {
       console.log(error);
@@ -39,12 +42,15 @@ function ProgrameRequest() {
   }
   const deleteRequestPrograme = async () => {
     try {
-      const { status } = await axios.delete("/programe-requests", {
-        params: {
-          id: user._id,
-          programeId: client?._id,
-        },
-      });
+      const { status } = await axios.delete(
+        "https://sport-kappa-six.vercel.app/programe-requests",
+        {
+          params: {
+            id: user._id,
+            programeId: client?._id,
+          },
+        }
+      );
       if (status === 200) {
         deleteRef.current.style.scale = 1;
         setTimeout(() => {

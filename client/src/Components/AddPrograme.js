@@ -48,11 +48,15 @@ function AddPrograme() {
     data.append("id", id);
 
     try {
-      const { status } = await axios.post("/upload", data, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      const { status } = await axios.post(
+        "https://sport-kappa-six.vercel.app/upload",
+        data,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
       if (status === 200) {
         window.location.href = "/";
       }
