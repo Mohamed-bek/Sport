@@ -451,23 +451,46 @@
 }
 
 .ServiceList li {
-  padding: 10px 0;
-  color: var(--black-color);
+  background-color: var(--black-color);
   position: relative;
-  padding-right: 20px;
+  overflow-y: hidden;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 20px;
 }
-.ServiceList li:before {
+.ServiceList li .liPara {
+  font-size: 1.5rem;
+  width: calc(77.5% - 30px);
+  color: var(--white-color);
+}
+.ServiceList li .imgC {
+  width: 22.5%;
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+}
+.ServiceList li .imgC img {
+  width: 100%;
+}
+/* .ServiceList li:before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 35px;
   right: 0;
   transform: translateY(-50%);
   width: 8px;
   height: 8px;
   background-color: var(--first-color);
   border-radius: 50%;
-}
-.ServiceList li span {
+} */
+.ServiceList li p span {
   color: var(--first-color);
   padding-left: 20px;
   margin-left: 17px;

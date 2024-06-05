@@ -121,12 +121,12 @@ function Contact() {
             </div>
             <div className="DivInfo">
               <img src={LogoPhone} alt="" />
-              <a href="tel:+0793764811">11 48 76 93 07 </a>
+              <a href="tel:+0561561911">11 19 56 61 05 </a>
             </div>
             <div className="DivInfo">
               <img src={LogoMail} alt="" />
-              <a href="mailto:healthsportconnect@gmail.com">
-                healthsportconnect@gmail.com
+              <a href="mailto:Sihatouka.nahwa.Elafdhel7@gmail.com">
+                Sihatouka.nahwa.Elafdhel7@gmail.com
               </a>
             </div>
             <div className="DivInfo">

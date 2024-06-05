@@ -9,7 +9,6 @@ function ProgrameDetails() {
     if (programe && programe.youtubeLinks) {
       setExercises(programe.youtubeLinks);
     }
-    console.log(programe.pdfFile);
   }, [programe]);
 
   const extractVideoId = (url) => {

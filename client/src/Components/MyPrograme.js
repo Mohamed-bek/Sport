@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { programeStore } from "../context/UserContext";
+import gym from "../images/gym.png";
 
 function MyPrograme() {
   const [password, setpassword] = useState();
@@ -23,14 +24,27 @@ function MyPrograme() {
   return programe ? (
     <div> Yes programe </div>
   ) : (
-    <div className="ProgrameRequest MyPrograme">
+    <div className="ProgrameRequest MyPrograme NewPrograme">
       <div>
-        <input
-          onChange={(e) => setpassword(e.target.value)}
-          type="password"
-          placeholder="كلمة السر"
-        />
-        <button onClick={() => loginToPrograme(password)}> دخول </button>
+        <div>
+          <h1>مرحبا بك</h1>
+          <h2>
+            {" "}
+            من هنا يمكنك الولوج إلى برامجك <span>
+              {" "}
+              التدريبي و الغدائي{" "}
+            </span>{" "}
+          </h2>
+          <input
+            onChange={(e) => setpassword(e.target.value)}
+            type="password"
+            placeholder="كلمة السر"
+          />
+          <button onClick={() => loginToPrograme(password)}> دخول </button>
+        </div>
+      </div>
+      <div>
+        <img src={gym} alt="Gym" />
       </div>
     </div>
   );

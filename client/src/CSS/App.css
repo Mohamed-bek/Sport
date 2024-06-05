@@ -768,3 +768,56 @@ body {
 .facebook {
   margin: 0 auto;
 }
+.NewPrograme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 !important;
+}
+.NewPrograme > div {
+  width: 50%;
+  height: 100%;
+}
+.NewPrograme > div:last-child img {
+  width: 100%;
+}
+.NewPrograme > div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  border-radius: 30px;
+}
+.NewPrograme > div:first-child > div {
+  width: 100%;
+  padding: 10px;
+}
+.NewPrograme > div:first-child h2 {
+  width: 90%;
+  text-align: center;
+  color: var(--white-color);
+  margin: 30px auto;
+  font-size: 1.1rem;
+}
+.NewPrograme > div:first-child h2 span {
+  color: var(--first-color);
+  display: block;
+}
+.NewPrograme > div:first-child h1 {
+  width: 90%;
+  text-align: center;
+  color: var(--white-color);
+  font-size: 2rem;
+}
+.NewPrograme > div:first-child input,
+.NewPrograme > div:first-child button {
+  margin: 20px auto;
+}
+.NewPrograme > div:first-child input {
+  border-color: var(--white-color);
+}
+.NewPrograme > div:first-child input,
+.NewPrograme > div:first-child input::placeholder {
+  color: var(--white-color);
+}
