@@ -50,9 +50,12 @@ function SignIn(props) {
   const Sign = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("./signup", {
-        ...InfoSign,
-      });
+      const { data } = await axios.post(
+        "https://sport-kappa-six.vercel.app/signup",
+        {
+          ...InfoSign,
+        }
+      );
       setInfoSign({
         firstName: "",
         lastName: "",
