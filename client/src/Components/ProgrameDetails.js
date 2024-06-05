@@ -26,7 +26,7 @@ function ProgrameDetails() {
         <p> لتحميل البرنامج اظغط هنا </p>
         <button>
           <a
-            href={`http://localhost:8000/${programe?.pdfFile}`}
+            href={`https://sport-kappa-six.vercel.app/${programe?.pdfFile}`}
             target="_blank"
             download
           >
