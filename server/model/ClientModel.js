@@ -6,7 +6,7 @@ const clientSchema = new Schema(
   {
     doctorId: {
       type: mongoose.Types.ObjectId,
-      ref: "medcin",
+      ref: "Medcin",
       required: [true, "Doctor Id Name is required"],
     },
     firstName: {
