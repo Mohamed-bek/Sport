@@ -47,10 +47,10 @@ function Header() {
   const Location = useLocation().pathname;
   const Slayder = (i) => {
     slide.current.style.display =
-      slide.current.style.display !== "block" ? "block" : "";
-    slide.current.style.left = `${
-      (100 / Links.length) * i + 100 / (Links.length * 2)
-    }%`;
+      // slide.current.style.display !== "block" ? "block" : "";
+      slide.current.style.left = `${
+        (100 / Links.length) * i + 100 / (Links.length * 2)
+      }%`;
     if (ul.current) {
       ul.current.classList.toggle("active");
     }

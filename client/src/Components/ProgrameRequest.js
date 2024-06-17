@@ -123,8 +123,10 @@ function ProgrameRequest() {
             </div>
           </div>
           <div className="flx">
-            <span> رقم الطبيب :</span>{" "}
-            <span> {client?.doctorId?.phoneNumber} </span>{" "}
+            <div>
+              <span> رقم الطبيب :</span>{" "}
+              <span> {client?.doctorId?.phoneNumber} </span>
+            </div>{" "}
           </div>
           {client?.healthProblems?.length > 0 ? (
             <div>
