@@ -110,6 +110,22 @@ function ProgrameRequest() {
               <span> الطول :</span> <span> {client?.height} </span>{" "}
             </div>
           </div>
+          <div className="flx">
+            <div>
+              {" "}
+              <span> اسم الطبيب :</span>{" "}
+              <span> {client?.doctorId?.firstName} </span>{" "}
+            </div>
+            <div>
+              {" "}
+              <span> لقب الطبيب :</span>{" "}
+              <span> {client?.doctorId?.lastName}</span>{" "}
+            </div>
+          </div>
+          <div className="flx">
+            <span> رقم الطبيب :</span>{" "}
+            <span> {client?.doctorId?.phoneNumber} </span>{" "}
+          </div>
           {client?.healthProblems?.length > 0 ? (
             <div>
               <h2> مشاكل صحية :</h2>

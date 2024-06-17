@@ -33,7 +33,68 @@ function SignIn(props) {
     gender: "men",
     specialite: "مختص_جراحة_العظام_و_المفاصل",
     phoneNumber: "",
+    wilaya: null,
   });
+  const wilayas = [
+    { id: 1, name: "أدرار" },
+    { id: 2, name: "الشلف" },
+    { id: 3, name: "الأغواط" },
+    { id: 4, name: "أم البواقي" },
+    { id: 5, name: "باتنة" },
+    { id: 6, name: "بجاية" },
+    { id: 7, name: "بسكرة" },
+    { id: 8, name: "بشار" },
+    { id: 9, name: "البليدة" },
+    { id: 10, name: "البويرة" },
+    { id: 11, name: "تمنراست" },
+    { id: 12, name: "تبسة" },
+    { id: 13, name: "تلمسان" },
+    { id: 14, name: "تيارت" },
+    { id: 15, name: "تيزي وزو" },
+    { id: 16, name: "الجزائر" },
+    { id: 17, name: "الجلفة" },
+    { id: 18, name: "جيجل" },
+    { id: 19, name: "سطيف" },
+    { id: 20, name: "سعيدة" },
+    { id: 21, name: "سكيكدة" },
+    { id: 22, name: "سيدي بلعباس" },
+    { id: 23, name: "عنابة" },
+    { id: 24, name: "قالمة" },
+    { id: 25, name: "قسنطينة" },
+    { id: 26, name: "المدية" },
+    { id: 27, name: "مستغانم" },
+    { id: 28, name: "المسيلة" },
+    { id: 29, name: "معسكر" },
+    { id: 30, name: "ورقلة" },
+    { id: 31, name: "وهران" },
+    { id: 32, name: "البيض" },
+    { id: 33, name: "إليزي" },
+    { id: 34, name: "برج بوعريريج" },
+    { id: 35, name: "بومرداس" },
+    { id: 36, name: "الطارف" },
+    { id: 37, name: "تندوف" },
+    { id: 38, name: "تيسمسيلت" },
+    { id: 39, name: "الوادي" },
+    { id: 40, name: "خنشلة" },
+    { id: 41, name: "سوق أهراس" },
+    { id: 42, name: "تيبازة" },
+    { id: 43, name: "ميلة" },
+    { id: 44, name: "عين الدفلى" },
+    { id: 45, name: "النعامة" },
+    { id: 46, name: "عين تموشنت" },
+    { id: 47, name: "غرداية" },
+    { id: 48, name: "غليزان" },
+    { id: 49, name: "تميمون" },
+    { id: 50, name: "برج باجي مختار" },
+    { id: 51, name: "أولاد جلال" },
+    { id: 52, name: "بني عباس" },
+    { id: 53, name: "إن صالح" },
+    { id: 54, name: "إن قزام" },
+    { id: 55, name: "تقرت" },
+    { id: 56, name: "جانت" },
+    { id: 57, name: "المغير" },
+    { id: 58, name: "المنيعة" },
+  ];
   const [TypeVis, setTypeVis] = useState(false);
   const ChangeType = () => {
     document.querySelectorAll(".SignForm .AfterInp .see").forEach((icon) => {
@@ -203,6 +264,23 @@ function SignIn(props) {
             <div className="AfterInp">
               <FontAwesomeIcon className="icon" icon={faCheck} />
               <select
+                onChange={(e) =>
+                  setInfoSign({ ...InfoSign, wilaya: e.target.value })
+                }
+              >
+                <option key={99999999} value={null}>
+                  الولاية
+                </option>
+                {wilayas.map((wilaya) => (
+                  <option key={wilaya.id} value={wilaya.name}>
+                    {wilaya.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="AfterInp">
+              <FontAwesomeIcon className="icon" icon={faCheck} />
+              <select
                 onChange={(e) => {
                   setInfoSign({ ...InfoSign, specialite: e.target.value });
                 }}
@@ -221,21 +299,6 @@ function SignIn(props) {
                 <option value="مختص_في_أمراض_النساء_و_التوليد">
                   مختص في أمراض النساء و التوليد
                 </option>
-                <option value="اخصائي التغذيه">اخصائي التغذيه</option>
-                <option value="اخصائي التغذيه اخصائي الامراض الصدريه والحساسيه">
-                  اخصائي التغذيه اخصائي الامراض الصدريه والحساسيه
-                </option>
-              </select>
-            </div>
-            <div className="AfterInp">
-              <FontAwesomeIcon className="icon" icon={faCheck} />
-              <select
-                onChange={(e) =>
-                  setInfoSign({ ...InfoSign, gender: e.target.value })
-                }
-              >
-                <option value="men"> رجل </option>
-                <option value="women">امرأة</option>
               </select>
             </div>
             <input type="submit" value="تسجيل" />

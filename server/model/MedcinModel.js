@@ -53,6 +53,10 @@ const medcinSchema = new Schema(
       type: String,
       default: "doctor",
     },
+    wilaya: {
+      type: String,
+      required: [true, "wilaya is required"],
+    },
   },
   { timestamps: true }
 );

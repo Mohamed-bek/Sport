@@ -602,10 +602,10 @@ body {
   border-bottom: 1px solid var(--white-color);
 }
 .New .doctorInfo > div {
-  width: 20%;
+  width: calc(100% / 6);
 }
 .Old .doctorInfo > div {
-  width: calc(90% / 5);
+  width: calc(90% / 6);
   overflow-x: hidden;
   text-align: center;
 }

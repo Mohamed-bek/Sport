@@ -17,6 +17,7 @@ export const SingUp = async (req, res) => {
       birthday,
       gender,
       specialite,
+      wilaya,
     } = req.body;
     if (
       !firstName ||
@@ -26,7 +27,8 @@ export const SingUp = async (req, res) => {
       !password ||
       !birthday ||
       !gender ||
-      !specialite
+      !specialite ||
+      !wilaya
     ) {
       throw new Error("All Information is required");
     }
@@ -48,6 +50,7 @@ export const SingUp = async (req, res) => {
       birthday: parsedBirthday,
       gender,
       specialite,
+      wilaya,
     });
 
     if (!medcin) {
@@ -182,7 +185,10 @@ export const GetProgrameRequest = async (req, res) => {
     const medcin = await Medcin.findById(id);
     if (!medcin) throw new Error("The Doctor is Not Found");
     if (medcin.role !== "admin") throw new Error("You Cant get This Content");
-    const programes = await Client.find();
+    const programes = await Client.find().populate({
+      path: "doctorId",
+      select: "firstName lastName phoneNumber",
+    });
     res.status(200).json({ programes });
   } catch (error) {
     res.status(400).json({ error: error.message });

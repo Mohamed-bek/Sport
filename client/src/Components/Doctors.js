@@ -49,6 +49,7 @@ function Doctors() {
           <div> اللقب </div>
           <div> البريد الالكتروني </div>
           <div> رقم الهاتف </div>
+          <div> الولاية </div>
           <div> التخصص </div>
         </div>
         {oldDoctors.map((doctor) => (
@@ -57,6 +58,7 @@ function Doctors() {
             <div> {doctor?.lastName} </div>
             <div> {doctor?.email} </div>
             <div> {doctor?.phoneNumber || "????"}</div>
+            <div> {doctor?.wilaya}</div>
             <div> {doctor?.specialite} </div>
           </div>
         ))}
@@ -68,6 +70,7 @@ function Doctors() {
           <div> اللقب </div>
           <div> البريد الالكتروني </div>
           <div> رقم الهاتف </div>
+          <div> الولاية </div>
           <div> التخصص </div>
           <div> تفعيل </div>
           <div> حذف </div>
@@ -78,6 +81,7 @@ function Doctors() {
             <div> {doctor?.lastName} </div>
             <div> {doctor?.email} </div>
             <div> {doctor?.phoneNumber || "????"}</div>
+            <div> {doctor?.wilaya}</div>
             <div> {doctor?.specialite} </div>
             <div>
               {" "}
