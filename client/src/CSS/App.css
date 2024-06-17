@@ -605,9 +605,12 @@ body {
   width: calc(100% / 6);
 }
 .Old .doctorInfo > div {
-  width: calc(90% / 6);
+  width: calc(70% / 5);
   overflow-x: hidden;
   text-align: center;
+}
+.Old .doctorInfo > div:nth-child(5) {
+  width: 20%;
 }
 .Old .doctorInfo > div:nth-child(7),
 .Old .doctorInfo > div:nth-child(6) {
