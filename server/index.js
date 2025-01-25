@@ -19,7 +19,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "*",
+    origin: "https://sport-client-gamma.vercel.app",
+    credentials: true,
   })
 );
 
